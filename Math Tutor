@@ -1,0 +1,36 @@
+/*Math Tutor - Program to display two random numbers to be added and provide the answer at the users prompting.
+
+247 + 129 =
+
+
+247 + 129 = 376 */
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <cmath>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+double A, B, C;
+char next;
+unsigned seed = time(0);
+srand(seed);
+
+cout << "Welcome to Math Tutor " << endl;
+cout << "Practice adding two numbers << "\n\n";
+cout << "After you've solved check your answer" << endl;
+
+A = 1 + rand() % 350;
+B = 1 + rand() % 350;
+C = A + B;
+
+cout << "\n";
+cout << A << " + " << B << " = " << endl;
+cout << "Hit any key and then Enter to show the answer";
+cin >> next;
+cout << "" << endl;
+cout << A << " + " << B << " = " << C << endl;
+return 0;
+}
